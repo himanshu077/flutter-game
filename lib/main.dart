@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_game/components/constants/AppTheme.dart';
 
+import 'components/constants/AppTheme.dart';
 import 'presentation/SplashView.dart';
 
 
