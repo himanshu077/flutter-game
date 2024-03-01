@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
+import '../utils/AppExtensions.dart';
 import '../components/constants/AppFonts.dart';
 import '../components/coreComponents/AppButton.dart';
 import 'SplashView.dart';
+import 'game/GameView.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({super.key});
@@ -23,7 +24,9 @@ class _WelcomeViewState extends State<WelcomeView> {
             Expanded(child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AppButton(onTap:(){},label: 'Start',margin: const EdgeInsets.only(bottom: AppFonts.s40),),
+                AppButton(
+                  onTap:()=> context.pushAndClearNavigator(const GameView()),
+                  label: 'Start',margin: const EdgeInsets.only(bottom: AppFonts.s40),),
                 AppButton(onTap:(){},label: 'Scores',),
               ],
             ))
