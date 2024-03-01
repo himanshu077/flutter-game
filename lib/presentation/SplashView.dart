@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_game/presentation/WelcomeView.dart';
-import 'package:flutter_game/utils/AppExtensions.dart';
-
+import '../utils/AppExtensions.dart';
 import '../components/constants/AppFonts.dart';
 import '../components/constants/AppIcons.dart';
 import '../components/constants/AppStrings.dart';
 import '../components/constants/TextStyles.dart';
 import '../components/coreComponents/ImageView.dart';
 import '../components/coreComponents/TextView.dart';
+import 'WelcomeView.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
