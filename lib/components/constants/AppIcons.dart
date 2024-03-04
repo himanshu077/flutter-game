@@ -8,6 +8,7 @@ class AppIcons{
   static const String fav = '${_iconPath}fav.png';
   static const String exit = '${_iconPath}exit.png';
   static const String man0 = '${_iconPath}man0.png';
+  static const String hanger = '${_iconPath}man0.png';
   static const String man1 = '${_iconPath}man1.png';
   static const String man2 = '${_iconPath}man2.png';
   static const String man3 = '${_iconPath}man3.png';
