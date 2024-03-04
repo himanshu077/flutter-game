@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import '../constants/AppColors.dart';
 import '../constants/AppFonts.dart';
 
-appDialog(BuildContext context, Widget child) {
+appDialog(BuildContext context, Widget child, {bool barrierDismissible = true}) {
   showDialog(
       context: context,
       useSafeArea: true,
+      barrierDismissible: barrierDismissible,
       builder: (_) => AnimateDialog(
         childView: AlertDialog(
           shape: const RoundedRectangleBorder(
