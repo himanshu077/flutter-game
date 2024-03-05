@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_game/components/widgets/dialog/ExitDialogView.dart';
-import 'package:flutter_game/components/widgets/dialog/GameOverDialog.dart';
-import 'package:flutter_game/presentation/WelcomeView.dart';
-import 'package:flutter_game/utils/AppExtensions.dart';
+import '../../utils/AppExtensions.dart';
 
 import '../../components/constants/AppFonts.dart';
+import '../../components/widgets/dialog/ExitDialogView.dart';
+import '../../components/widgets/dialog/GameOverDialog.dart';
 import '../../viewController/controller_bloc.dart';
+import '../WelcomeView.dart';
 import 'GameAppBar.dart';
 import 'GameInputBox.dart';
 import 'GameManView.dart';

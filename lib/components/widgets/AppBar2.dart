@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../components/constants/AppColors.dart';
 
 import '../constants/AppFonts.dart';
 import '../constants/AppIcons.dart';
@@ -19,7 +20,7 @@ class AppBar2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: padding ?? EdgeInsets.all(AppFonts.s16),
+      padding: padding ?? const EdgeInsets.all(AppFonts.s16),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -29,7 +30,8 @@ class AppBar2 extends StatelessWidget {
               onTap: onLeadTap,
                 url: leadIcon ?? AppIcons.backButton,
               size: leadIconSize ?? AppFonts.s20,
-              margin: EdgeInsets.only(right: AppFonts.s10),
+              margin: const EdgeInsets.only(right: AppFonts.s10),
+              tintColor: AppColors.creamBrown,
             ),
           ),
           Expanded(child: TextView(text: title ?? '', textStyle: titleStyle,)),

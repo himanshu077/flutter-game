@@ -18,5 +18,4 @@ class ScoreRepoImplementation extends ScoreRepo{
   Future<List<ScoreModel>> getScores() async{
     return StorageService.getScoreList();
   }
-
 }

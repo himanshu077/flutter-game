@@ -1,4 +1,3 @@
-import 'package:flutter_game/components/constants/AppIcons.dart';
 
 enum ImageType { asset, file, network }
 
@@ -7,16 +6,6 @@ enum HangmanStates {state0, state1, state2, state3, state4, state5, state6}
 const List<String> keyboardKeys = [
   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
   'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-];
-
-const List<String> manImagesList = [
-  AppIcons.man0,
-  AppIcons.man1,
-  AppIcons.man2,
-  AppIcons.man3,
-  AppIcons.man4,
-  AppIcons.man5,
-  AppIcons.man6
 ];
 
 const List<String> wordLibrary =  [

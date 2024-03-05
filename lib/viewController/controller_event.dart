@@ -33,5 +33,11 @@ class KeyboardKeyEvent extends ControllerEvent{
   List<Object?> get props => [key];
 }
 
+class GetScoresEvent extends ControllerEvent{
+  @override
+  List<Object?> get props => [];
+}
+
+
 
 
