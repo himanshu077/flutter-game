@@ -29,7 +29,7 @@ extension AppStateExtn on BuildContext{
   void get stopLoader => Navigator.of(this, rootNavigator: false).pop('dialog');
 
 // show popup dialog ....
-  void openDialog(Widget child) => appDialog(this, child);
+  void openDialog(Widget child,{bool barrierDismissible = true}) => appDialog(this, child,barrierDismissible: barrierDismissible);
 
   // show popup dialog ....
   void openFailureDialog(String message) => appDialog(this, FailureMessageDailog(
