@@ -29,6 +29,7 @@ class TextStyles{
   //SemiBold
   static const TextStyle semiBold14Background = TextStyle(color: AppColors.primaryBackground, fontSize: AppFonts.s14, fontFamily: Family.semiBold);
   static const TextStyle semiBold24CreamBrown = TextStyle(color: AppColors.creamBrown, fontSize: AppFonts.s24, fontFamily: Family.semiBold);
+  static const TextStyle semiBold16White = TextStyle(color: AppColors.white, fontSize: AppFonts.s16, fontFamily: Family.semiBold);
 
 
   //Bold

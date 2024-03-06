@@ -18,11 +18,7 @@ class StorageService{
   }
 
   static List<ScoreModel> getScoreList(){
-    List<ScoreModel> list = _scoreBox.values.toList();
-    for(ScoreModel item in list){
-      print(item.toJson());
-    }
-    return list;
+    return _scoreBox.values.toList();
   }
 
 

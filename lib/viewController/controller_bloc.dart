@@ -3,12 +3,12 @@ import 'dart:math';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_game/utils/DateTimeUtils.dart';
 
 import '../components/constants/constants.dart';
 import '../model/ScoreModel.dart';
 import '../services/repo/ScoreRepo.dart';
 import '../utils/AppExtensions.dart';
+import '../utils/DateTimeUtils.dart';
 
 part 'controller_event.dart';
 
@@ -27,6 +27,7 @@ class ControllerBloc extends Bloc<ControllerEvent, ControllerState> {
   List<String> _selectedKeyBoardKeys = [];
   final List<String> _libraryList = [];
   List<String> _wordList = [];
+  List<ScoreModel> scoresList = [];
 
   ControllerBloc() : super(ControllerInitial()) {
     on<StartGameEvent>(_onStartGame);
@@ -34,6 +35,7 @@ class ControllerBloc extends Bloc<ControllerEvent, ControllerState> {
     on<NextLifeEvent>(_onNextLife);
     on<KeyboardKeyEvent>(_onKeyPress);
     on<GameOverEvent>(_onGameOver);
+    on<GetScoresEvent>(_onGetScores);
   }
 
   FutureOr<void> _onStartGame(
@@ -142,6 +144,13 @@ class ControllerBloc extends Bloc<ControllerEvent, ControllerState> {
   }
 
   void _addScore() => {_repo.addScore(score: ScoreModel(score: score, timeStamp: DateTimeUtils.getCurrentTimeStamp)),_repo.getScores()};
+
+  FutureOr<void> _onGetScores(GetScoresEvent event, Emitter<ControllerState> emit) async{
+    _changeState(emit);
+    scoresList.clear();
+    scoresList.addAll(await _repo.getScores());
+    _changeState(emit);
+  }
 }
 
 int _getRandomNumber(int count) => random.nextInt(count);
