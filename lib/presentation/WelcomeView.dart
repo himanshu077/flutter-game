@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import '../components/constants/AppStrings.dart';
 import '../utils/AppExtensions.dart';
 import '../components/constants/AppFonts.dart';
 import '../components/coreComponents/AppButton.dart';
+import 'ScoreView.dart';
 import 'SplashView.dart';
 import 'game/GameView.dart';
 
@@ -27,7 +29,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                 AppButton(
                   onTap:()=> context.pushAndClearNavigator(const GameView()),
                   label: 'Start',margin: const EdgeInsets.only(bottom: AppFonts.s40),),
-                AppButton(onTap:(){},label: 'Scores',),
+                AppButton(onTap:()=> context.pushNavigator(const ScoreView()),label: AppStrings.scores,),
               ],
             ))
           ],

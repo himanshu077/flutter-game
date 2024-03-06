@@ -23,6 +23,7 @@ class DateTimePattern{
   static const String dd_MM_yyyy_HHss = 'dd-MM-yyyy HH:ss';//08-12-2023 12:00
   static const String ddMMMyyyy_hhmma = 'dd MMM yyyy, hh:mm a';//08-12-2023 12:00
   static const String ddMMyyyy = 'dd-MM-yyyy';//08-12-2023
+  static const String ddMMMyyyy = 'dd-MMM-yyyy';//08-12-2023
   static const String HHss = 'HH:ss';//12:00
 }
 
@@ -34,5 +35,6 @@ extension StampToPatternExtension on int{
   String get dd_MM_yyyy_HHss =>DateTimeUtils.stampToPattern(this, DateTimePattern.dd_MM_yyyy_HHss);
   String get ddMMMyyyy_hhmma =>DateTimeUtils.stampToPattern(this, DateTimePattern.ddMMMyyyy_hhmma);
   String get ddMMyyyy =>DateTimeUtils.stampToPattern(this, DateTimePattern.ddMMyyyy);
+  String get ddMMMyyyy =>DateTimeUtils.stampToPattern(this, DateTimePattern.ddMMMyyyy);
   String get HHss =>DateTimeUtils.stampToPattern(this, DateTimePattern.HHss);
 }

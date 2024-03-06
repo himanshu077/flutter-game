@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_game/components/constants/AppFonts.dart';
+import '../../components/constants/AppFonts.dart';
 
 import '../../components/constants/AppColors.dart';
 import '../../components/constants/AppIcons.dart';
-import '../../components/constants/constants.dart';
 import '../../components/coreComponents/ImageView.dart';
 import '../../viewController/controller_bloc.dart';
 
